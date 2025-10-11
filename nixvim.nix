@@ -19,6 +19,7 @@ in
     ./config/plugins/kickstart/todo-comments.nix
     ./config/plugins/kickstart/mini.nix
     ./config/plugins/kickstart/treesitter.nix
+    ./config/plugins/kickstart/trouble.nix
 
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #

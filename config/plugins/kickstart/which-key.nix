@@ -19,10 +19,6 @@
           group = "[C]ode";
         }
         {
-          __unkeyed-1 = "<leader>g";
-          group = "[G]it";
-        }
-        {
           __unkeyed-1 = "<leader>t";
           group = "[T]oggle";
         }

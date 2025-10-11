@@ -7,7 +7,7 @@
     filesystem = {
       window = {
         mappings = {
-          "\\" = "close_window";
+          "q" = "close_window";
         };
       };
     };
@@ -16,7 +16,7 @@
   # https://nix-community.github.io/nixvim/keymaps/index.html
   keymaps = [
     {
-      key = "\\";
+      key = "<leader>e";
       action = "<cmd>Neotree reveal<cr>";
       options = {
         desc = "NeoTree reveal";

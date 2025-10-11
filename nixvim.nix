@@ -5,7 +5,7 @@
   ...
 }:
 let
-  enable_nerd_fonts = false;
+  enable_nerd_fonts = true;
 in
 {
   imports = [
@@ -113,28 +113,6 @@ in
     P.S. You can delete this when you're done too. It's your config now! :)
   */
 
-  # You can easily change to a different colorscheme.
-  # Add your colorscheme here and enable it.
-  # Don't forget to disable the colorschemes you arent using
-  #
-  # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  colorschemes = {
-    # https://nix-community.github.io/nixvim/colorschemes/tokyonight/index.html
-    tokyonight = {
-      enable = true;
-      settings = {
-        # Like many other themes, this one has different styles, and you could load
-        # any other, such as 'storm', 'moon', or 'day'.
-        style = "night";
-        styles = {
-          comments = {
-            italic = false; # Disable italics in comments
-          };
-        };
-      };
-    };
-  };
-
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
   globals = {
     # Set <space> as the leader key
@@ -153,8 +131,6 @@ in
       xsel.enable = true; # For X11
     };
 
-    # Sync clipboard between OS and Neovim
-    #  Remove this option if you want your OS clipboard to remain independent.
     register = "unnamedplus";
   };
 
@@ -249,65 +225,6 @@ in
         desc = "Exit terminal mode";
       };
     }
-    # TIP: Disable arrow keys in normal mode
-    /*
-      {
-        mode = "n";
-        key = "<left>";
-        action = "<cmd>echo 'Use h to move!!'<CR>";
-      }
-      {
-        mode = "n";
-        key = "<right>";
-        action = "<cmd>echo 'Use l to move!!'<CR>";
-      }
-      {
-        mode = "n";
-        key = "<up>";
-        action = "<cmd>echo 'Use k to move!!'<CR>";
-      }
-      {
-        mode = "n";
-        key = "<down>";
-        action = "<cmd>echo 'Use j to move!!'<CR>";
-      }
-    */
-    # Keybinds to make split navigation easier.
-    #  Use CTRL+<hjkl> to switch between windows
-    #
-    #  See `:help wincmd` for a list of all window commands
-    {
-      mode = "n";
-      key = "<C-h>";
-      action = "<C-w><C-h>";
-      options = {
-        desc = "Move focus to the left window";
-      };
-    }
-    {
-      mode = "n";
-      key = "<C-l>";
-      action = "<C-w><C-l>";
-      options = {
-        desc = "Move focus to the right window";
-      };
-    }
-    {
-      mode = "n";
-      key = "<C-j>";
-      action = "<C-w><C-j>";
-      options = {
-        desc = "Move focus to the lower window";
-      };
-    }
-    {
-      mode = "n";
-      key = "<C-k>";
-      action = "<C-w><C-k>";
-      options = {
-        desc = "Move focus to the upper window";
-      };
-    }
   ];
 
   # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
@@ -321,9 +238,6 @@ in
   #  See `:help lua-guide-autocommands`
   # https://nix-community.github.io/nixvim/NeovimOptions/autoCmd/index.html
   autoCmd = [
-    # Highlight when yanking (copying) text
-    #  Try it with `yap` in normal mode
-    #  See `:help vim.hl.on_yank()`
     {
       event = [ "TextYankPost" ];
       desc = "Highlight when yanking (copying) text";

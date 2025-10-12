@@ -6,13 +6,15 @@
 
     modules = {
       # Better Around/Inside textobjects
-      #
-      # Examples:
-      #  - va)  - [V]isually select [A]round [)]paren
-      #  - yinq - [Y]ank [I]nside [N]ext [Q]uote
-      #  - ci'  - [C]hange [I]nside [']quote
       ai = {
         n_lines = 500;
+        custom_text_objects = {
+          # tags
+          t = [
+            "<([%p%w]-)%f[^<%w][^<>]->.-</%1>"
+            "^<.->().*()</[^/]->$"
+          ];
+        };
       };
 
       # Add/delete/replace surroundings (brackets, quotes, etc.)

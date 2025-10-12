@@ -10,16 +10,19 @@ in
 {
   imports = [
     # Plugins
-    ./config/plugins/kickstart/gitsigns.nix
     ./config/plugins/kickstart/which-key.nix
     ./config/plugins/kickstart/telescope.nix
     ./config/plugins/kickstart/lsp.nix
     ./config/plugins/kickstart/conform.nix
     ./config/plugins/kickstart/blink-cmp.nix
-    ./config/plugins/kickstart/todo-comments.nix
     ./config/plugins/kickstart/mini.nix
     ./config/plugins/kickstart/treesitter.nix
     ./config/plugins/kickstart/trouble.nix
+
+    ./config/plugins/editor.nix
+    ./config/plugins/filetree.nix
+    ./config/plugins/git.nix
+    ./config/plugins/ui.nix
 
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #
@@ -29,7 +32,6 @@ in
     # ./config/plugins/kickstart/debug.nix
     # ./config/plugins/kickstart/indent-blankline.nix
     # ./config/plugins/kickstart/lint.nix
-    # ./config/plugins/kickstart/autopairs.nix
     # ./config/plugins/kickstart/neo-tree.nix
     #
     # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
@@ -155,6 +157,12 @@ in
 
     # Enable break indent
     breakindent = true;
+
+    # Tab spacing 2 spaces
+    tabstop = 2;
+    softtabstop = 2;
+    shiftwidth = 2;
+    expandtab = true;
 
     # Save undo history
     undofile = true;

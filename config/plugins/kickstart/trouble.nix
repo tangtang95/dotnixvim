@@ -3,18 +3,9 @@
     trouble = {
       enable = true;
       settings = {
-        auto_close = true;
         modes = {
-          preview_split = {
-            # NOTE: can automatically open when diagnostics exist
-            # auto_open = true;
-            mode = "diagnostics";
-            preview = {
-              type = "split";
-              relative = "win";
-              position = "right";
-              size = 0.5;
-            };
+          lsp = {
+            win = {position = "right";};
           };
         };
       };
@@ -34,7 +25,7 @@
     {
       mode = "n";
       key = "<leader>xx";
-      action = "<cmd>Trouble preview_split toggle<cr>";
+      action = "<cmd>Trouble diagnostics toggle<cr>";
       options = {
         desc = "Diagnostics toggle";
       };
@@ -42,17 +33,9 @@
     {
       mode = "n";
       key = "<leader>xX";
-      action = "<cmd>Trouble preview_split toggle filter.buf=0<cr>";
+      action = "<cmd>Trouble diagnostics toggle filter.buf=0<cr>";
       options = {
         desc = "Buffer Diagnostics toggle";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>us";
-      action = "<cmd>Trouble symbols toggle focus=false<cr>";
-      options = {
-        desc = "Symbols toggle";
       };
     }
     {
@@ -77,6 +60,14 @@
       action = "<cmd>Trouble qflist toggle<cr>";
       options = {
         desc = "Quickfix List toggle";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cs";
+      action = "<cmd>Trouble symbols toggle focus=false<cr>";
+      options = {
+        desc = "Symbols toggle";
       };
     }
   ];

@@ -13,6 +13,9 @@
         headerMaxWidth = 80;
       };
     };
+    nvim-surround = {
+      enable = true;
+    };
   };
 
   keymaps = [

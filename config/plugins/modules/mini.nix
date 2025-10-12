@@ -17,15 +17,6 @@
         };
       };
 
-      # Add/delete/replace surroundings (brackets, quotes, etc.)
-      #
-      # Examples:
-      #  - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      #  - sd'   - [S]urround [D]elete [']quotes
-      #  - sr)'  - [S]urround [R]eplace [)] [']
-      surround = {
-      };
-
       # Simple and easy statusline.
       #  You could remove this setup call if you don't like it,
       #  and try some other statusline plugin

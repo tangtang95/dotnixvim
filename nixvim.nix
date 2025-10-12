@@ -30,9 +30,7 @@ in
     #  Uncomment any of the lines below to enable them (you will need to restart nvim).
     #
     # ./config/plugins/kickstart/debug.nix
-    # ./config/plugins/kickstart/indent-blankline.nix
     # ./config/plugins/kickstart/lint.nix
-    # ./config/plugins/kickstart/neo-tree.nix
     #
     # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
     # Add your plugins to ./config/plugins/custom and import them below

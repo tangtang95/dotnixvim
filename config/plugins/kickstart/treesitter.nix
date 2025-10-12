@@ -12,8 +12,6 @@
       # Linux
       bash
       ssh_config
-      # sway
-      tmux
 
       # Nix, Nixvim
       nix
@@ -33,16 +31,15 @@
       gitcommit
       gitignore
       ini
-      # llvm
       markdown
       markdown_inline
       regex
-      # xml
+      xml
       yaml
 
       # Rust Development
       rust
-      toml # Also for ZMK `keymap.toml`
+      toml
 
       # Web Development
       css
@@ -50,20 +47,12 @@
       # http
       javascript
       json
-      # json5
-      # php
-      # php_only
-      # phpdoc
-      # sql
-      # scss
-      # twig
-      # tsx
-      # typescript
+      sql
+      scss
+      typescript
 
       # Web - other
-      # astro
-      # nginx
-      # svelte
+      nginx
     ];
 
     settings = {

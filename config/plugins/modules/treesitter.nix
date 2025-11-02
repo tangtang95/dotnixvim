@@ -7,75 +7,71 @@
 
     # Installing tree-sitter grammars from Nixpkgs (recommended)
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html#installing-tree-sitter-grammars-from-nixpkgs
-    # grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
-    grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-      # Linux
-      bash
-      ssh_config
-
-      # Nix, Nixvim
-      nix
-      query # treesitter queries
-      vim
-      vimdoc
-      # lua
-      # luadoc
-
-      # General Development
-      csv
-      diff
-      editorconfig
-      git_config
-      git_rebase
-      gitattributes
-      gitcommit
-      gitignore
-      ini
-      markdown
-      markdown_inline
-      regex
-      xml
-      yaml
-
-      # Rust Development
-      rust
-      toml
-
-      # Web Development
-      css
-      html
-      # http
-      javascript
-      json
-      sql
-      scss
-      typescript
-
-      # Web - other
-      nginx
-    ];
+    grammarPackages = pkgs.vimPlugins.nvim-treesitter.passthru.allGrammars;
+    # grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+    #   # Linux
+    #   bash
+    #   ssh_config
+    #
+    #   # Nix, Nixvim
+    #   nix
+    #   query # treesitter queries
+    #   vim
+    #   vimdoc
+    #   # lua
+    #   # luadoc
+    #
+    #   # General Development
+    #   csv
+    #   diff
+    #   editorconfig
+    #   git_config
+    #   git_rebase
+    #   gitattributes
+    #   gitcommit
+    #   gitignore
+    #   ini
+    #   markdown
+    #   markdown_inline
+    #   regex
+    #   xml
+    #   yaml
+    #
+    #   # Rust Development
+    #   rust
+    #   toml
+    #
+    #   java
+    #
+    #   # Web Development
+    #   css
+    #   html
+    #   # http
+    #   javascript
+    #   json
+    #   sql
+    #   scss
+    #   typescript
+    #
+    #   # Web - other
+    #   nginx
+    # ];
 
     settings = {
       # Installing tree-sitter grammars from nvim-treesitter
       # (can be combined with grammarPackages from Nixpkgs)
       # https://nix-community.github.io/nixvim/plugins/treesitter/index.html#installing-tree-sitter-grammars-from-nvim-treesitter
       ensureInstalled = [
+        "java"
+        "nix"
       ];
 
       highlight = {
         enable = true;
-
-        # Some languages depend on vim's regex highlighting system for indent rules.
-        additional_vim_regex_highlighting = [
-          "ruby"
-        ];
       };
 
       indent = {
         enable = true;
-        disable = [
-          "ruby"
-        ];
       };
 
       # There are additional nvim-treesitter modules that you can use to interact

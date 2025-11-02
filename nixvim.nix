@@ -22,6 +22,8 @@ in
     ./config/plugins/modules/conform.nix
     ./config/plugins/modules/blink-cmp.nix
     ./config/plugins/modules/trouble.nix
+
+    # ./config/plugins/modules/lang/java.nix
   ];
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals

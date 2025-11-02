@@ -45,6 +45,10 @@
             type = "app";
             program = "${nvim}/bin/nvim";
           };
+          apps.print = {
+            type = "app";
+            program = "${nvim}/bin/nixvim-print-init";
+          };
 
           # Optional: Add checks back if you want CI validation
           checks.default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
